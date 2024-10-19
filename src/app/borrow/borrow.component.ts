@@ -1,35 +1,32 @@
 // src/app/borrow-loan/borrow-loan.component.ts
-import { Component, OnInit } from '@angular/core';
+// // borrow-loan.component.ts
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppComponent } from '../app.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-borrow-loan',
-  templateUrl: './borrow-loan.component.html',
-  styleUrls: ['./borrow-loan.component.css'],
-  imports: [AppComponent, BorrowLoanComponent, FormBuilder,  FormGroup, Validators, Component]
-
+  selector: 'app-borrow',
+  templateUrl: './borrow.component.html',
+  styleUrls: ['./borrow.component.css'],
+  standalone: true,  // Specify that this is a standalone component
+  imports: [CommonModule, ReactiveFormsModule, RouterModule] // Import necessary Angular modules
 })
-export class BorrowLoanComponent implements OnInit {
+export class BorrowComponent {
   loanForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    // Initialize the form with amount and reason fields
     this.loanForm = this.fb.group({
       amount: ['', [Validators.required, Validators.min(1)]],
       reason: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
 
-  ngOnInit(): void {}
-
-  // Handle form submission
   onSubmit(): void {
     if (this.loanForm.valid) {
       const loanRequest = this.loanForm.value;
       console.log('Loan Request Submitted:', loanRequest);
-      // Logic for sending loan request to the backend service
-      // e.g., this.loanService.requestLoan(loanRequest).subscribe()
     }
   }
 }
