@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { LandingComponent } from './landing/landing.component'; // Import LandingComponent
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,  // Standalone component setup
+  imports: [LandingComponent]  // Import LandingComponent here
 })
 export class AppComponent {
-  title = 'stockvel';
+  title = 'Community Savings Platform';
 }
