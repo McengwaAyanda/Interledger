@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Vote on the Loan Request</h2>
+    <form (ngSubmit)="submitVote(voteForm)" voteForm="ngForm">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="vote" value="approve" ngModel required>
+            <label class="form-check-label">Approve Loan</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="vote" value="reject" ngModel required>
+            <label class="form-check-label">Reject Loan</label>
+        </div>
+        <button type="submit" class="btn-primary mt-3"[disabled]="!voteForm.form.valid">Submit Vote</button>
+    </form>
+
+    <div *ngIf="voteResult">
+        <alert> Your vote has been recorded: {{ voteResult }}</alert>
+    </div>
+</div>
