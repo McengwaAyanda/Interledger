@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
-  standalone: true,
-  imports: [],
   templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css'
+  styleUrls: ['./landing.component.css'],
+  standalone: true
 })
 export class LandingComponent {
+
+  learnMore() {
+    alert('This platform helps you manage your community savings effectively.');
+  }
 
 }

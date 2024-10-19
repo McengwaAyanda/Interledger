@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [],
   standalone: true,
+  imports: [RouterOutlet, LandingComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css',  './landing.css'],
+
 })
 export class AppComponent {
-  
+  title = 'Community Savings Platform';
 }

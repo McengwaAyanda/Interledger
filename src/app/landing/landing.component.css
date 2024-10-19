@@ -1,0 +1,105 @@
+/* Hero Section */
+.hero-section {
+  background-image: url('https://source.unsplash.com/1600x900/?finance,community');
+  background-size: cover;
+  color: #5b5858;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.hero-section .lead {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.hero-section .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Features Section */
+h2 {
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card i {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* Community Governance Section */
+.row .col-md-6 i {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.row .col-md-6 h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.row .col-md-6 p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Call to Action */
+.call-to-action {
+  background-color: #343a40;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.call-to-action .btn-light {
+  background-color: #f8f9fa;
+  color: #007bff;
+  font-size: 1.3rem;
+  padding: 15px 30px;
+}
+
+.call-to-action .btn-light:hover {
+  background-color: #e2e6ea;
+}
