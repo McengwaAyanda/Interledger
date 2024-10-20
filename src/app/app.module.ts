@@ -1,21 +1,16 @@
-// app.module.ts (or main.ts)
+import { LandingComponent } from './landing/landing.component';
+import { PlatformComponent } from './platform/platform.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { BorrowComponent } from './borrow/borrow.component';
-import { appRoutes } from './app.routes';  // Import your routes
+import { RouterModule, Routes } from '@angular/router';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    BorrowComponent, // Declare your component
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes),  // Add RouterModule and pass the routes
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+
+// Define your routes here
+export const appRoutes: Routes = [
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingComponent },
+  { path: 'platform', component: PlatformComponent }
+];
+
+
 export class AppModule { }

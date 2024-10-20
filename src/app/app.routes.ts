@@ -1,13 +1,14 @@
 import { Routes } from '@angular/router';
-import { BorrowComponent } from './borrow/borrow.component';
+import { LandingComponent } from './landing/landing.component';
+import { PlatformComponent } from './platform/platform.component';
+import { NgModule } from '@angular/core';
 
-// Define the routes for your application
+// Define your routes
 const routes: Routes = [
-  {
-    path: 'borrow',
-    component: BorrowComponent,
-  },
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'landing', component: LandingComponent },
+  { path: 'platform', component: PlatformComponent },
 ];
 
-// Export the routes so they can be used in other parts of the app
+
 export const appRoutes = routes;

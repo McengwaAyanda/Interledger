@@ -1,0 +1,28 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.mr-3 {
+  margin-right: 15px;
+}

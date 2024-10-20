@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BorrowComponent } from '../borrow/borrow.component';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
-  imports: [LandingComponent, BorrowComponent],
+  imports: [LandingComponent,],
   styleUrls: ['./landing.component.css'],
   standalone: true
 })
