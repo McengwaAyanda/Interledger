@@ -1,15 +1,17 @@
+// src/app/borrow-loan/borrow-loan.component.ts
+// // borrow-loan.component.ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';  // Import ReactiveFormsModule for formGroup
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-borrow',
   templateUrl: './borrow.component.html',
   styleUrls: ['./borrow.component.css'],
-  standalone: true,  // Standalone component
-  imports: [CommonModule, ReactiveFormsModule, RouterModule]  // Add ReactiveFormsModule here
+  standalone: true,  // Specify that this is a standalone component
+  imports: [CommonModule, ReactiveFormsModule, RouterModule] // Import necessary Angular modules
 })
 export class BorrowComponent {
   loanForm: FormGroup;
